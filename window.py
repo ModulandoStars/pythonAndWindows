@@ -25,7 +25,7 @@ IntroductionText.set("olá, bem vindo ao seletor de pastas aleatórias!")
 #                folderDirList.append(entry.name)
 
 
-textList = [1,2]
+textList = []
 variableList = tk.Variable(value=textList)
 textBox = ""
 
@@ -40,11 +40,10 @@ text.pack(pady=15)
 
 dirAskBox = tk.Text(
     root,
-    height=5,
-    width=10,
+    height=1,
+    width=20,
     font=("Segoe UI", 12)
 )
-dirAskBox.insert(tk.END, "C:\\Windows")
 dirAskBox.pack()
 
 def inmendText(text):
@@ -52,7 +51,7 @@ def inmendText(text):
     variableList = tk.Variable(value=textList)
     textList.append(textBox)
     print(textList)
-    folderList.insert(tk.END, textBox)
+    folderList.insert(tk.END, textList[-1])
     root.update()
 
 doFunction = tk.Button(
